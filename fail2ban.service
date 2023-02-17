@@ -1,0 +1,11 @@
+[Unit]
+Description=Fail2Ban service
+After=network.target
+
+[Service]
+ExecStart=bash /bin/fail2band.sh
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=default.target
